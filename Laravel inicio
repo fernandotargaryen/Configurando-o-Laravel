@@ -1,0 +1,28 @@
+Passo 1 - Instalando o laravel no CMD:
+composer global require laravel/installer (CMD)
+
+Passo 2 - Verificando ser o laravel foi instalado:
+laravel --version (CMD)
+
+Passo 3 - Criando um arquivo (Não esquecer de editar no arquivo php.ini da pasta do seu "PHP" o ";extension=zip" para "extension=zip", tirando o ';"):
+laravel new nome-do-projeto (CMD)
+
+Passo 4 - Entrando no projeto pelo vs code:
+cd nome-do-projeto (CMD)
+em seguida:
+code . (CMD)
+
+Passo 5 - Instale o Composer no terminal do VS CODE ( Verifique se o arquivo composer.json 
+está atualizado com a versão do PHP que utiliza, caso mudar, add o "composer update", e aguarde todas as dependências serem instaladas):
+composer install (VS CODE TERMINAL)
+
+Passp 6 - Configuar o arquivo .env (Lembra-se que é importante verificar ser existe o arquivo .env, caso não altere o ".env.example" para ".env" e modifique as informações:
+Gere a chave APP_KEY com o comando: php artisan key:generate ((VS CODE TERMINAL) OBS: após gerar a chave ela será integrada automaticamente no APP_KEY
+Fuso horário APP_TIMEZONE: APP_TIMEZONE=America/Sao_Paulo (Altere no arquivo .env)
+Idioma localido no APP_LOCALE altere para: APP_LOCALE=pt_BR  (Altere no arquivo .env)
+
+Passo 7 - Rodar o servidor para verificar ser está funcionado
+php artisan serve
+
+ATENÇÃO: Esses passos são apenas básicos, onde não houve integração com o banco de dados rodando no servidor. Ele está indicando que não foi encontrado, 
+pois realmente é necessário escolher um banco de dados para o seu projeto.
